@@ -1,0 +1,25 @@
+• Routing •
+- Routing in Next Js is a file based
+- Any Routing Pages will be in app folder
+- in folder (app) page.tsx this the home page 
+- if you want to make (about) page then make folder called about and create file called page.tsx
+- for nested routes if you want to make (about/serach) then in about folder make (serach) folder and create file called page.tsx
+- to make link to any rout we use Link component from next
+
+import Link from "next/link";
+<Link href={"about"}>about</Link>
+
+- layout.tsx is a layout page , this page is has the main html structure
+- 
+export const metadata: Metadata = {
+  title: "Noyan website",
+  description: "my first project with next js",
+};
+this metadata for title and description the website
+- to add font from google font =>
+
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
+   <html lang="en">
+      <body className={`${inter.className} `}>{children}</body>
+    </html>
