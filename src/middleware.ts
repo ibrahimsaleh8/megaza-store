@@ -2,12 +2,21 @@ import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
   const jwtToken = request.cookies.get("token");
-  const token = jwtToken?.value as string;
+  const token = jwtToken?.value;
+
   if (!token) {
+    if (
+      request.nextUrl.pathname === "/login" ||
+      request.nextUrl.pathname === "/register" ||
+      request.nextUrl.pathname === "/reset-password"
+    ) {
+      return NextResponse.next();
+    }
+
     if (request.nextUrl.pathname.startsWith("/api/user/profile/")) {
       return NextResponse.json(
-        { message: "no token provided, access denied" },
-        { status: 401 } // Unauthorized
+        { message: "No token provided, access denied" },
+        { status: 401 }
       );
     } else if (
       request.nextUrl.pathname === "/wishlist" ||
@@ -26,6 +35,8 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/", request.url));
     }
   }
+
+  return NextResponse.next();
 }
 
 export const config = {
