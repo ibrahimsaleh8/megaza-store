@@ -15,10 +15,10 @@ export default function LogoutBtn() {
     await axios
       .get(`${MainDomain}/api/auth/logout`)
       .then(() => {
-        router.refresh();
-        router.replace("/");
         UpdateUserInfo(null);
         UpdateUserDetails(null);
+        router.refresh();
+        router.replace("/");
       })
       .catch((err) => console.log(err));
   };
