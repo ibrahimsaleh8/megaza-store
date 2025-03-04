@@ -9,8 +9,17 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaBagShopping } from "react-icons/fa6";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function WideSectionLanding() {
+  const params = useSearchParams();
+  const route = useRouter();
+  useEffect(() => {
+    if (params.get("welcome")) {
+      route.refresh();
+    }
+  }, [params, route]);
+
   // Aos Animation
   useEffect(() => {
     Aos.init({
