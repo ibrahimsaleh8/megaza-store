@@ -1,6 +1,7 @@
 import Footer from "@/components/layoutComponts/Footer";
 import Navbar from "@/components/layoutComponts/Header/Navbar";
 import { MainDomain } from "@/utils/mainDomain";
+import RefreshOnMount from "@/utils/RefreshOnMount";
 
 export default async function layout({
   children,
@@ -18,6 +19,7 @@ export default async function layout({
   }[] = await fetchCats.json();
   return (
     <div className="flex flex-col min-h-screen relative">
+      <RefreshOnMount />
       <div className="bg-black text-white text-sm py-3 flex items-center justify-center">
         Discover offer page to get up to 50% discount
       </div>

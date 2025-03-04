@@ -1,7 +1,11 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import notFoundimage from "../../public/images/error404-Photoroom.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Not found",
+};
 export default function NotFoundPage() {
   return (
     <div className="flex flex-col gap-3 items-center justify-center h-screen">
