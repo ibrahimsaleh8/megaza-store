@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
               <p>Welcome to Megaza, your go-to destination for the latest in men's fashion! 👔🔥</p>
               <p>Get ready to explore premium styles, trendy outfits, and exclusive deals – all curated just for you.</p>
               <a style="color: #ffffff; background-color: #000000; padding: 10px 15px; text-decoration: none; border-radius: 5px; display: inline-block;" 
-                href="${MainDomain}?welcome">
+                href="${MainDomain}?welcome=1">
                 Go to Megaza Store
               </a>
             </div>
