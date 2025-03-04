@@ -1,1 +1,1 @@
-export const MainDomain = "https://megaza-store.vercel.app";
+export const MainDomain = "http://localhost:3000";

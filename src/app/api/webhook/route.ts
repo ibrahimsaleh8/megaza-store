@@ -176,8 +176,8 @@ export async function POST(request: NextRequest) {
             border-radius: 5px;
             display: inline-block;
           "
-          href="${MainDomain}/profile/admin/orders">
-          check order
+          href="${MainDomain}">
+          Go to Megaza
         </a>
       </div>
       <hr style="margin-top: 20px" />

@@ -7,6 +7,7 @@ import HydrateUserFullDetails from "@/store/HydrateUserFullDetails";
 import { MainDomain } from "@/utils/mainDomain";
 import { userDetailsType } from "@/store/userDetailsStore";
 import ProtectDashboard from "./profile/_components/ProtectDashboard";
+import RefreshOnMount from "@/utils/RefreshOnMount";
 let userData: userDetailsType;
 
 export default async function layout({
@@ -29,6 +30,8 @@ export default async function layout({
     <SidebarProvider>
       <AppSidebar isAdmin={user?.isAdmin} />
       <main className="w-full">
+        <RefreshOnMount />
+
         <div className="flex items-center gap-2 bg-second_black p-3">
           <SidebarTrigger className="bg-white" />
           <DashboardHeader isAdmin={user ? user.isAdmin : false} />
