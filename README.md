@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 [Megaza - E-commerce Website](https://megaza-store.vercel.app/)
 
-## Getting Started
+**[Live Demo](https://megaza-store.vercel.app/)** 🚀  
 
-First, run the development server:
+Megaza is an e-commerce platform for selling men's fashion clothing. Built with modern web technologies, it offers a seamless shopping experience with powerful features for both users and admins.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Megaza provides a comprehensive online shopping experience with features like authentication, product management, and secure checkout. It is designed to be fast, scalable, and user-friendly.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Project Technologies
 
-To learn more about Next.js, take a look at the following resources:
+### **Frontend:**
+- ⚛️ Next.js + TypeScript  
+- 🔄 React Query  
+- 🐻 Zustand (State Management)  
+- 📝 React Hook Form + Zod Validation  
+- 🎨 Tailwind CSS  
+- 🖌️ Shadcn UI  
+- 🔔 React Toastify  
+- 📡 Axios  
+- ✨ Aos Animation  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Backend:**
+- 🗄️ PostgreSQL  
+- 🌿 Prisma ORM  
+- 🔒 Bcrypt.js  
+- 🛡️ JSON Web Token (JWT)  
+- 📧 Nodemailer  
+- ☁️ Cloudinary  
+- 💳 Stripe  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📋 Project Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔑 **Authentication (Login / Register / Forgot Password)**
+- **Register:** Create an account using a username, email, and password. A welcome email is sent upon successful registration.  
+- **Login:** Secure login using email and password.  
+- **Forgot Password:** Users can reset their password via an email reset link.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 📊 **Dashboard (User & Admin)**
+
+#### 🧍‍♂️ **User Dashboard:**
+- View orders with real-time status updates.  
+- Update personal account information.  
+
+#### 🛠️ **Admin Dashboard:**
+- View total stats: Products, Orders, Customers, Categories.  
+- Manage orders (view, update status).  
+- Manage users (delete, update roles).  
+- Manage products (add, delete, update).  
+- Manage categories (add, update, delete).  
+- Create and manage discount codes.  
+
+---
+
+### 🛍️ **Products Management**
+- View all products with caching for faster performance.  
+- Filter products by price or category.  
+- Display discounted products separately.  
+- Detailed product pages with optimized image loading.  
+- Search products with debounce to enhance search performance.  
+
+---
+
+### 🛒 **Shopping Cart & Wishlist**
+- **Cart:**
+  - Add to Cart / Remove from Cart.  
+  - Adjust product quantity with debounce for optimized updates.  
+- **Wishlist:**
+  - Add products to Wishlist with caching for instant updates.  
+- **Technologies Used:** Next.js, React Query, Zustand, PostgreSQL  
+
+---
+
+### 💳 **Checkout & Payment**
+- **Payment options:**
+  - Pay on delivery.  
+  - Pay by credit card (via Stripe).  
+- Apply discount codes at checkout.  
+
+---
+
+### 📄 **Additional Pages**
+- **About Us:** Information about the business.  
+- **Contact Us:** Contact form and details.  
+- **Terms & Conditions:** Legal policies and guidelines.  
+- **FAQs:** Frequently asked questions.  
+
+---
+
+## 📌 **Getting Started**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/megaza.git
